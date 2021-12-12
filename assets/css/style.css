@@ -1,0 +1,617 @@
+/* *************************************************************************************************************************
+
+1 - Fonts
+2 - Settings
+3 - Header
+4 - Nav-Bar
+5 - Section
+6 - Contact
+7 - Footer
+8 - Copyright
+9 - Nos travaux
+10 - Translate
+11 - Media-Queries
+
+************************************************************************************************************************* 
+
+************************************************************************************************************************* */
+
+/* 1 - FONTS 
+************************************************************************************************************************* */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Ubuntu:wght@300&display=swap');
+
+@font-face {
+    font-family: "principal-font";
+    src: url(/assets/fonts/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+    font-family: "title-font";
+    src: url(/assets/fonts/Lobster-Regular.ttf);
+}
+
+@font-face {
+    font-family: "maj-font";
+    src: url(/assets/fonts/BebasNeue-Regular.ttf);
+}
+
+/* 2 - SETTINGS 
+************************************************************************************************************************* */
+:root {
+    --black-color: #212121;
+    --white-color: #fff;
+    --white1-color: #FFFFFF;
+    --title-color: #A8A6A1;
+    --title1-color: #444444;
+    --title2-color: #444340;
+    --title3-color: #444444;
+}
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+*::-moz-selection {
+    color: #fff;
+    background: #333;
+}
+
+*::selection {
+    color: #fff;
+    background: #333;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #fff;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #333;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+
+}
+
+h2 {
+    padding: 30px;
+}
+
+body {
+    background-color: var(--black-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+li:hover {
+    transform: scale(1.1);
+}
+
+li:active {
+    transform: scale(0.9);
+}
+
+#container {
+    width: 60%;
+    background-color: var(--white-color);
+    margin: auto;
+}
+
+.line {
+    border-top: 1px solid var(--title2-color);
+    width: 60%;
+    margin: 30px auto;
+}
+
+/* 3 - HEADER 
+************************************************************************************************************************* */
+header img {
+    height: 250px;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+}
+
+header h1 {
+    text-align: center;
+    font-family: "title-font", 'Lobster', cursive;
+    color: var(--title1-color);
+    font-size: 2.5rem;
+    padding: 10px;
+}
+
+header h2 {
+    text-align: center;
+    padding: 10px;
+    font-family: "principal-font", 'Ubuntu', sans-serif;
+    color: var(--title-color);
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+
+
+/* 4 - NAVBAR 
+************************************************************************************************************************* */
+nav {
+    background: linear-gradient(to right, #212121 0%, #444444 50%, #212121 100%);
+    text-align: center;
+    padding: 18px 18px;
+}
+
+nav ul li {
+    list-style-type: none;
+    padding: 8px 18px;
+    display: inline-block;
+    justify-content: center;
+    font-family: "principal-font", 'Ubuntu', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.triangles {
+    width: 100%;
+}
+
+/* 5 - SECTION  
+************************************************************************************************************************* */
+#home h2 {
+    font-family: "title-font", 'Lobster', cursive;
+    font-size: 3rem;
+    margin-left: 50px;
+    color: var(--title1-color)
+}
+
+section {
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+section img {
+    width: 100%;
+}
+
+section h2 {
+    font-family: "title-font", 'Lobster', cursive;
+    font-size: 1.8rem;
+    text-align: left;
+    color: var(--title2-color);
+    font-weight: 400;
+    padding: 8px;
+}
+
+section p {
+    font-family: "principal-font", 'Ubuntu', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 100;
+    padding: 8px;
+}
+
+.center {
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 6 - CONTACT 
+************************************************************************************************************************* */
+#contact img {
+    display: block;
+    margin: auto;
+}
+
+#contact h3 {
+    font-family: "title-font", 'Lobster', cursive;
+    font-size: 2.5rem;
+    color: var(--title2-color);
+    text-align: center;
+}
+
+/* 7 - FOOTER
+************************************************************************************************************************* */
+footer p,
+footer a {
+    text-align: center;
+    font-family: "maj-font", 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: var(--black-color);
+}
+
+footer p a {
+    text-decoration: underline;
+}
+
+#arrow-up img:hover {
+    color: aqua;
+}
+
+#arrow-up img {
+    width: 5%;
+    transition: 1s ease-in-out;
+    animation: anim 2s infinite alternate;
+}
+
+@keyframes anim {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+/* 8 - COPYRIGHT 
+************************************************************************************************************************* */
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: linear-gradient(to right, #212121 0%, #333333 50%, #212121 100%);
+    color: var(--white1-color);
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    border-top-width: 2px;
+    font-family: "principal-font", 'Ubuntu', sans-serif;
+}
+
+/* 9 - NOS TRAVAUX 
+************************************************************************************************************************* */
+#nostravaux {
+    font-family: "title-font", 'Lobster', cursive;
+    font-size: 3rem;
+    margin-left: 90px;
+    color: var(--title1-color);
+}
+
+main {
+    height: 100%;
+    width: 99%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    margin: auto;
+    background: var(--white-color);
+    padding-top: 50px;
+    text-align: center;
+}
+
+main div {
+    height: 433px;
+    margin: auto;
+}
+
+main img {
+    height: 200px;
+    width: 230px;
+    margin: auto;
+}
+
+main p {
+    font-family: "principal-font", 'Ubuntu', sans-serif;
+    width: 300px;
+    margin: auto;
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+
+main h4 {
+    color: var(--title2-color);
+    font-weight: 400;
+    padding: 20px;
+    font-size: 1.6rem;
+    font-family: "title-font", 'Lobster', cursive;
+}
+
+.letter {
+    transform: translateZ(200px);
+}
+
+
+/* 10 - TRANSLATE 
+************************************************************************************************************************* */
+.flag img {
+    position: fixed;
+    width: 5%;
+    top: 20px;
+    left: 20px;
+    border-radius: 4px;
+}
+
+/* 11 - MEDIA-QUERIES 
+************************************************************************************************************************* */
+
+@media screen and (max-width: 1618px) {
+    #container {
+        width: 1076px;
+    }
+
+    .triangles {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1384px) {
+    #container {
+        width: 1076px;
+    }
+
+    .triangles {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 1076px) {
+    #container {
+        width: 100%;
+    }
+
+    header img {
+        width: 500px;
+    }
+
+    #contact img {
+        display: none;
+    }
+
+    #contact h3,
+    #nostravaux {
+        margin: 30px;
+    }
+
+    .line {
+        display: none;
+    }
+
+    section {
+        height: 100%;
+    }
+
+    iframe {
+        width: 460px;
+    }
+
+    #home h2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #container {
+        width: 100%;
+    }
+
+    .triangles {
+        display: none;
+    }
+
+    header img {
+        width: 450px;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    #contact img {
+        display: none;
+    }
+
+    #contact h3,
+    #nostravaux {
+        margin: 30px;
+    }
+
+    .line {
+        display: none;
+    }
+
+    section {
+        height: 100%;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "a b"
+            "c c";
+    }
+
+    section div:nth-child(1) {
+        grid-area: a;
+    }
+
+    section div:nth-child(2) {
+        grid-area: b;
+    }
+
+    section div:nth-child(3) {
+        grid-area: c;
+    }
+
+    iframe {
+        width: 460px;
+    }
+
+    #home h2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #container {
+        width: 100%;
+    }
+
+    .triangles {
+        display: none;
+    }
+
+    header img {
+        width: 100%;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    #contact img {
+        display: none;
+    }
+
+    #contact h3,
+    #nostravaux {
+        margin: 30px;
+    }
+
+    .line {
+        display: none;
+    }
+
+    section {
+        height: 100%;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "c c"
+            "a a"
+            "b b";
+    }
+
+    section div:nth-child(1) {
+        grid-area: a;
+    }
+
+    section div:nth-child(2) {
+        grid-area: b;
+    }
+
+    section div:nth-child(3) {
+        grid-area: c;
+    }
+
+    iframe {
+        width: 460px;
+    }
+
+    #home h2 {
+        display: none;
+    }
+
+    #arrow-up img {
+        width: 10%;
+        margin: auto;
+    }
+
+    footer p,
+    footer i,
+    footer a {
+        font-size: 1.4rem;
+    }
+
+    #contact h3 {
+        display: none;
+    }
+
+    nav ul li {
+        list-style-type: none;
+        padding: 8px 8px;
+        display: inline-block;
+        justify-content: center;
+        font-family: "principal-font", 'Ubuntu', sans-serif;
+        font-size: rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #container {
+        width: 100%;
+    }
+
+    iframe {
+        width: 100%;
+        border-radius: 50%;
+    }
+
+    nav ul li {
+        list-style-type: none;
+        padding: 8px 2px;
+        display: inline-block;
+        justify-content: center;
+        font-family: "principal-font", 'Ubuntu', sans-serif;
+        font-size: rem;
+        font-weight: 200;
+    }
+
+    header img {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 260px) {
+    #container {
+        width: 100%;
+    }
+
+    iframe {
+        width: 100%;
+        border-radius: 50%;
+    }
+
+    nav ul li {
+        list-style-type: none;
+        padding: 8px 2px;
+        display: inline-block;
+        justify-content: center;
+        font-family: "principal-font", 'Ubuntu', sans-serif;
+        font-size: rem;
+        font-weight: 200;
+    }
+
+    header img {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 369px) {
+
+    nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        justify-content: center;
+        font-family: "principal-font", 'Ubuntu', sans-serif;
+        font-size: .3rem;
+        font-weight: 100;
+    }
+}
